@@ -26,15 +26,19 @@ function favouriteMe(val,option){
     });
 
     //clear
-    document.getElementById("favourites").innerHTML = "No favourite films";
+    document.getElementById("favourites").innerHTML = null;
 
     //create let for lenght - Big O notation
     let filmArrayLength = filmArray.length;
-    //loop
-    for(let i = 0; i < filmArrayLength; i++){
-        document.getElementById("favourites").innerHTML +=
-        `<tr><td>${filmArray[i]}</td><td><button class="ui google plus button" onClick="favouriteMe('${filmArray[i]}',2)">Remove me</button></td></tr>`;
-    }
+    if(filmArray.length === 0){
+        document.getElementById("favourites").innerHTML = "No favourite films";
+    }else{
+        //loop and quick append
+        for(let i = 0; i < filmArrayLength; i++){
+            document.getElementById("favourites").innerHTML +=
+            `<tr><td>${filmArray[i]}</td><td><button class="ui google plus button" onClick="favouriteMe('${filmArray[i]}',2)">Remove me</button></td></tr>`;
+        }
+    }    
 
     //alert user of choice
     if(option === 1){
