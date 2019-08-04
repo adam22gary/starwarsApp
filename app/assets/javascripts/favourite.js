@@ -30,6 +30,7 @@ function favouriteMe(val,option){
 
     //create let for lenght - Big O notation
     let filmArrayLength = filmArray.length;
+    
     if(filmArray.length === 0){
         document.getElementById("favourites").innerHTML = "No favourite films";
     }else{
