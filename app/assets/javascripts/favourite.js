@@ -26,7 +26,7 @@ function favouriteMe(val,option){
     });
 
     //clear
-    document.getElementById("favourites").innerHTML = null;
+    document.getElementById("favourites").innerHTML = "No favourite films";
 
     //create let for lenght - Big O notation
     let filmArrayLength = filmArray.length;
