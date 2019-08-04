@@ -4,12 +4,12 @@ function favouriteMe(val,option){
     // option 1 = add to local storage
     // option 2 = remove from local storage
 
-    let nameAndValue = val;
+    let theNameAndValue = val;
     
     if(option > 1){
-        localStorage.removeItem("starwars-" + nameAndValue);
+        localStorage.removeItem("starwars-" + theNameAndValue);
     }else{
-        localStorage["starwars-" + nameAndValue] = nameAndValue;
+        localStorage["starwars-" + theNameAndValue] = theNameAndValue;
     }
     
     //retrieve all films from storage
