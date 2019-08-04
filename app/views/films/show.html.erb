@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<div class="ui segment">
+  <h1>Film information</h1>
+
+  <p class="ui segment">
+    <strong>Title:</strong>
+    <%= @film["title"] %>
+  </p>
+
+  <p class="ui segment">
+    <strong>Opening crawl:</strong>
+    <%= @film["opening_crawl"] %>
+  </p>
+
+  <p class="ui segment">
+    <strong>Director:</strong>
+    <%= @film["director"] %>
+  </p>
+
+  <p class="ui segment">
+    <strong>Producer:</strong>
+    <%= @film["producer"] %>
+  </p>
+
+  <p class="ui segment">
+    <strong>Release date:</strong>
+    <%= @film["release_date"] %>
+  </p>
+
+  <div class="ui segment">
+    <strong>Characters:</strong>
+    <% @charactersArray.each do |char| %>
+      <span class="tooltip"><%= char["name"] %>
+        <table>
+          <thead>
+          <tbody>
+              <tr>
+                <td>Name:</td><td><%= char["name"]  %></td>
+                <td>Height:</td><td><%= char["height"]  %></td>
+                <td>Mass:</td><td><%= char["mass"]  %></td>
+                <td>Hair colour:</td><td><%= char["hair_color"]  %></td>
+                <td>Skin colour:</td><td><%= char["skin_color"]  %></td>
+                <td>Eye colour:</td><td><%= char["eye_color"]  %></td>
+                <td>Birth year:</td><td><%= char["birth_year"]  %></td>
+                <td>Gender:</td><td><%= char["gender"]  %></td>
+              </tr>
+          </tbody>
+        </table>
+      </span>
+    <% end %>
+  </div>
+  
+
+  <p class="ui segment">
+    <strong>Planets:</strong>
+    <%= @film["planets"] %>
+  </p>
+
+  <p class="ui segment">
+    <strong>Starships:</strong>
+    <%= @film["starships"] %>
+  </p>
+
+  <p class="ui segment">
+    <strong>Vehicles:</strong>
+    <%= @film["vehicles"] %>
+  </p>
+
+  <p class="ui segment">
+    <strong>Species:</strong>
+    <%= @film["species"] %>
+  </p>
+
+  <div className="ui clear"></div>
+  <div className="ui clear"></div>
+
+  <%= link_to 'Back to home', films_path, { :class=>"ui yellow button" } %>
+
+</div>

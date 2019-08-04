@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<div class="ui segment">
+  <h1>Films</h1>
+
+  <%= form_tag(root_path, method: "get") do %>
+    <div class="ui form segment">
+      <div class="field">
+        <%= label_tag(:search, "Search") %>
+        <%= text_field_tag(:search) %>
+      </div>
+      <div class="actions">
+        <%= submit_tag "Search", { :class=>"ui blue button" } %>
+      </div>
+      <% if params[:search] != nil %>
+        <h2>Your search a film</h2>
+        <p><%= @views %></p>
+      <% end %>
+    </div>
+  <% end %>
+  
+
+  <%# favourite table %>
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Favourites</th>
+        <th>Remove film from favourites</th>
+      </tr>
+    </thead>
+    <tbody id="favourites">
+    </tbody>
+  </table>
+
+  <%# all films table %>
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Film title</th>
+        <th>Add film to favourites</th>
+        <th>View film</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @films["results"].each do |film| %>
+        <tr>
+          <td><%= film["title"] %></td>
+          <td><button class="ui green button" onClick="favouriteMe('<%= film["title"] %>',1)">Favourite Me</button></td>
+          <td><%= link_to 'Show', film_path(film["episode_id"]),
+              { :class=>"ui blue button" }  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>
+
+<%# <%= link_to 'New Film', new_film_path %>
+
+<script>favOnLoad();</script>

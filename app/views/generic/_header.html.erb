@@ -1,0 +1,17 @@
+<header>    
+    <% if user_signed_in? %>
+        <span><%= link_to "Home", root_path %></span>
+        <span> | <%= current_user.email %></span>
+        <%# <span> | <%= link_to "My Profile", product_listings_path %>
+        <%# </span> %>
+        <span> | <%= link_to "logout", destroy_user_session_path, method: "DELETE" %></span>
+    <% else %>
+        <div class="nav">
+            <div class = "buttons">
+                <%= link_to 'Home', root_path %>
+                <button type="button" class="btn btn-primary btn-sm" > <%=  link_to "Log in", new_user_session_path %></button>
+                <button type="button" class="btn btn-primary btn-sm"><%= link_to "Sign up", new_user_registration_path %></button>
+            </div>
+        </div>
+    <% end %>
+</header>
