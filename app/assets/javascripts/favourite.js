@@ -43,6 +43,8 @@ function favouriteMe(val,option){
 
     //alert user of choice
     if(option === 1){
+        document.getElementById("alertDisplay").style.display = "block";
+
         alertUser(val);
     }
 
