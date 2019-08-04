@@ -4,7 +4,7 @@ function favouriteMe(val,option){
     // option 1 = add to local storage
     // option 2 = remove from local storage
 
-    let nameAndValue = val
+    let nameAndValue = val;
     
     if(option > 1){
         localStorage.removeItem("starwars-" + nameAndValue);
@@ -29,7 +29,7 @@ function favouriteMe(val,option){
     document.getElementById("favourites").innerHTML = null;
 
     //create let for lenght - Big O notation
-    let filmArrayLength = filmArray.length
+    let filmArrayLength = filmArray.length;
     //loop
     for(let i = 0; i < filmArrayLength; i++){
         document.getElementById("favourites").innerHTML +=
@@ -47,8 +47,6 @@ function alertUser(val){
     //alert user of choice
     alert("Great choice " + val + ", This film will now be added to your favourites. :-)");
 }
-
-
 
 function favOnLoad(){
     //retrieve all films from storage
@@ -68,7 +66,7 @@ function favOnLoad(){
     document.getElementById("favourites").innerHTML = null;
 
     //create let for lenght - Big O notation
-    let filmArrayLength = filmArray.length
+    let filmArrayLength = filmArray.length;
 
     if(filmArray.length === 0){
         document.getElementById("favourites").innerHTML = "No favourite films";

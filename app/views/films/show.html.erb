@@ -31,23 +31,21 @@
   <div class="ui segment">
     <strong>Characters:</strong>
     <% @charactersArray.each do |char| %>
-      <span class="tooltip"><%= char["name"] %>
-        <table>
+      <div class="tooltip"><%= char["name"] %>
+        <table class="tooltiptext">
           <thead>
           <tbody>
-              <tr>
-                <td>Name:</td><td><%= char["name"]  %></td>
-                <td>Height:</td><td><%= char["height"]  %></td>
-                <td>Mass:</td><td><%= char["mass"]  %></td>
-                <td>Hair colour:</td><td><%= char["hair_color"]  %></td>
-                <td>Skin colour:</td><td><%= char["skin_color"]  %></td>
-                <td>Eye colour:</td><td><%= char["eye_color"]  %></td>
-                <td>Birth year:</td><td><%= char["birth_year"]  %></td>
-                <td>Gender:</td><td><%= char["gender"]  %></td>
-              </tr>
+              <tr><td>Name:</td><td><%= char["name"]  %></td></tr>
+              <tr><td>Height:</td><td><%= char["height"]  %></td></tr>
+              <tr><td>Mass:</td><td><%= char["mass"]  %></td></tr>
+              <tr><td>Hair colour:</td><td><%= char["hair_color"]  %></td></tr>
+              <tr><td>Skin colour:</td><td><%= char["skin_color"]  %></td></tr>
+              <tr><td>Eye colour:</td><td><%= char["eye_color"]  %></td></tr>
+              <tr><td>Birth year:</td><td><%= char["birth_year"]  %></td></tr>
+              <tr><td>Gender:</td><td><%= char["gender"]  %></td></tr>
           </tbody>
         </table>
-      </span>
+      </div>
     <% end %>
   </div>
   

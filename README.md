@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- [Live link](http://mern-project-22.s3-website-ap-southeast-2.amazonaws.com/login)
 
-Things you may want to cover:
+## Functionality/Features
 
-* Ruby version
+Home screen contains a list of films pulled from the SWAPI
 
-* System dependencies
+List should be searchable
 
-* Configuration
+Films can be favourited, this state should be persisted using local storage
 
-* Database creation
+Favourited films should appear at the top of the list
 
-* Database initialization
+A stylised user prompt/alert should show when a film is favourited
 
-* How to run the test suite
+Favourited films can be unfavourited
 
-* Services (job queues, cache servers, search engines, etc.)
+Film list items can be clicked to show individual film page
 
-* Deployment instructions
+Film page should show all the information pulled from the SWAPI endpoint for an individual film
 
-* ...
+Film page should contain a back to home link
+
+The list of characters should display a tooltip when a list item is hovered
+
+The tooltip should show the character's bio pulled from the SWAPI endpoint for people
+
+Provide public GitHub repo to source code
+
+Host the finished project on Heroku, Surge or similar
+
+This test is focused on demonstrating Ruby on Rails, do not sweat the styling too much and feel free to use a framework like Bootstrap or similar
+
+Use the tooltip UI to show additional information pertaining to the film like vehicles, spaceships etc
+
+Demonstrate creative and performant ways of fetching information from SWAPI
+
+Provide a documented readme inside the GitHub repo explaining the technology used, the setup process and other relevant information
