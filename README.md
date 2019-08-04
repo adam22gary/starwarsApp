@@ -1,6 +1,6 @@
 # README
 
-- [Live link](http://mern-project-22.s3-website-ap-southeast-2.amazonaws.com/login)
+- [Live link](https://frozen-springs-90493.herokuapp.com)
 
 ## Functionality/Features
 
