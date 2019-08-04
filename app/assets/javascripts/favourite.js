@@ -30,7 +30,7 @@ function favouriteMe(val,option){
 
     //create let for lenght - Big O notation
     let filmArrayLength = filmArray.length;
-    
+
     if(filmArray.length === 0){
         document.getElementById("favourites").innerHTML = "No favourite films";
     }else{
@@ -79,7 +79,7 @@ function favOnLoad(){
         //loop and quick append
         for(let i = 0; i < filmArrayLength; i++){
             document.getElementById("favourites").innerHTML +=
-            `<tr><td>${filmArray[i]}</td><td><button class="ui google plus button" onClick="removeMe('${filmArray[i]}')">Remove me</button></td></tr>`;
+            `<tr><td>${filmArray[i]}</td><td><button class="ui google plus button" onClick="favouriteMe('${filmArray[i]}',2)">Remove me</button></td></tr>`;
         }
     }
 }
